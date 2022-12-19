@@ -88,8 +88,7 @@ class _HomePageState extends State<HomePage> {
   signin() {
     var username = _usernamecontroler.text.trim();
     var password = _passwordcontroller.text.trim();
-    if (_usernamecontroler.text.trim() == username &&
-        _passwordcontroller.text.trim() == password) {
+    if (username == password) {
       Navigator.of(context).push(MaterialPageRoute(
         builder: (context) => const AdminPage(),
       ));

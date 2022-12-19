@@ -31,7 +31,7 @@ class ViewaAstudent extends StatelessWidget {
           child: Center(
         child: Container(
           width: 1000,
-          color: Color.fromARGB(173, 128, 0, 255),
+          color: const Color.fromARGB(170, 9, 77, 28),
           //  decoration: BoxDecoration(color: Color.fromARGB(187, 104, 44, 114),
           //  ),
           child: Column(
@@ -49,13 +49,9 @@ class ViewaAstudent extends StatelessWidget {
                 onPressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => EditStudent(
-                          index: index,
-                          address: address,
-                          age: age,
-                          classname: standard,
-                          name: name,
-                          program: program),
+                      builder: (context) => EditStudent( 
+                        index: index,
+                      ),
                     ),
                   );
                 },

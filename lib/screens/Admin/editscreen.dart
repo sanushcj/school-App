@@ -1,49 +1,36 @@
 // ignore_for_file: no_leading_underscores_for_local_identifiers
 
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:ghss_periya/db/functions/database_functions.dart';
 import 'package:ghss_periya/db/model/data_model.dart';
-import 'package:ghss_periya/screens/students_registered.dart';
-// import 'package:ghss_periya/screens/students_registered.dart';
-import 'package:ghss_periya/screens/successful.dart';
 import 'package:hive/hive.dart';
 import 'package:image_picker/image_picker.dart';
 
 class EditStudent extends StatelessWidget {
-  final name;
-  final age;
-  final address;
-  final program;
-  final classname;
   int index;
-
+final studentDataBase =  Hive.openBox<StudentModel>('studentDB');
   final nameedit = TextEditingController();
   final ageedit = TextEditingController();
   final addressedit = TextEditingController();
   final programedit = TextEditingController();
   final classnameedit = TextEditingController();
 
-  EditStudent(
-      {required this.index,
-      required this.address,
-      required this.age,
-      required this.classname,
-      required this.name,
-      super.key,
-      this.program});
+  EditStudent({
+    required this.index,
+    super.key,
+  });
 
   String? pickedimagefromGallery;
 
   @override
   Widget build(BuildContext context) {
+     final editdata = studentDataBase;
     return Scaffold(
       appBar: AppBar(
         title: const Text(
           'Edit Screen',
         ),
-        backgroundColor: Color.fromARGB(255, 0, 51, 255),
+        backgroundColor: const Color.fromARGB(255, 0, 51, 255),
       ),
       body: Center(
         child: ListView(
@@ -53,7 +40,7 @@ class EditStudent extends StatelessWidget {
             ),
 
             TextFormField(
-              // initialValue: name,
+              // initialValue: editdata. ,
               controller: nameedit,
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
@@ -135,7 +122,7 @@ class EditStudent extends StatelessWidget {
 
   Future<void> imageFromGallery() async {
     XFile? image = await ImagePicker().pickImage(source: ImageSource.gallery);
-   pickedimagefromGallery = image!.path;
+    pickedimagefromGallery = image!.path;
   }
 
   updateFunction(context, int index) async {
