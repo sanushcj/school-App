@@ -5,7 +5,7 @@ import 'package:hive_flutter/adapters.dart';
 
 main() async {
    WidgetsFlutterBinding.ensureInitialized();
-  Hive.initFlutter();
+ await Hive.initFlutter();
   if (!Hive.isAdapterRegistered(StudentModelAdapter().typeId)) {
     Hive.registerAdapter(StudentModelAdapter());
   }

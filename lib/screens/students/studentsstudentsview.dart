@@ -1,11 +1,11 @@
+
+
 import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:ghss_periya/db/functions/database_functions.dart';
-import 'package:ghss_periya/screens/studentViewScreen.dart';
+import 'package:ghss_periya/db/model/data_model.dart';
 import 'package:ghss_periya/screens/students/studentslist.dart';
-
-import '../../db/model/data_model.dart';
 
 class StudentsRegisteredStudent extends StatelessWidget {
   const StudentsRegisteredStudent({super.key});
