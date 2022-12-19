@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ghss_periya/db/model/data_model.dart';
 import 'package:ghss_periya/screens/firstpage.dart';
-import 'package:ghss_periya/screens/home.dart';
 import 'package:hive_flutter/adapters.dart';
 
 main() async {

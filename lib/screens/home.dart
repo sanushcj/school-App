@@ -1,9 +1,7 @@
 // ignore_for_file: unrelated_type_equality_checks
 
 import 'package:flutter/material.dart';
-import 'package:ghss_periya/screens/add_students.dart';
 import 'package:ghss_periya/screens/adminPage.dart';
-import 'package:ghss_periya/db/functions/database_functions.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -88,8 +86,8 @@ class _HomePageState extends State<HomePage> {
   }
 
   signin() {
-    var username = 'sanush';
-    var password = 'gokul';
+    var username = _usernamecontroler.text.trim();
+    var password = _passwordcontroller.text.trim();
     if (_usernamecontroler.text.trim() == username &&
         _passwordcontroller.text.trim() == password) {
       Navigator.of(context).push(MaterialPageRoute(
