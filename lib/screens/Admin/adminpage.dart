@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ghss_periya/screens/add_students.dart';
 import 'package:ghss_periya/screens/students_registered.dart';
+import 'add_students.dart';
 
 class AdminPage extends StatelessWidget {
   const AdminPage({super.key});
@@ -12,8 +12,8 @@ class AdminPage extends StatelessWidget {
           child: Container(
               decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/img/Picsart_22-09-29_12-14-59-596.jpg'),
-              fit: BoxFit.fill),
+              image: AssetImage('assets/img/home_background.jpg'),
+              fit: BoxFit.cover),
         ),
             child: Center(
         child: Column(

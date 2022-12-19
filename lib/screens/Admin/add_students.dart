@@ -1,6 +1,5 @@
 // ignore_for_file: no_leading_underscores_for_local_identifiers
 
-import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:ghss_periya/db/functions/database_functions.dart';

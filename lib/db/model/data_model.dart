@@ -1,5 +1,4 @@
 import 'package:hive/hive.dart';
-import 'package:image_picker/image_picker.dart';
 part 'data_model.g.dart';
 
 @HiveType(typeId: 1)

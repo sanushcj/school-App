@@ -4,6 +4,7 @@ import 'package:ghss_periya/screens/firstpage.dart';
 import 'package:hive_flutter/adapters.dart';
 
 main() async {
+   WidgetsFlutterBinding.ensureInitialized();
   Hive.initFlutter();
   if (!Hive.isAdapterRegistered(StudentModelAdapter().typeId)) {
     Hive.registerAdapter(StudentModelAdapter());

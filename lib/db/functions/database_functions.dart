@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:ghss_periya/db/model/data_model.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:ghss_periya/screens/add_students.dart';
+import 'package:ghss_periya/screens/Admin/add_students.dart';
 
 ValueNotifier<List<StudentModel>> studentListNotifier = ValueNotifier([]);
 

@@ -1,7 +1,7 @@
 // ignore_for_file: unrelated_type_equality_checks
 
 import 'package:flutter/material.dart';
-import 'package:ghss_periya/screens/adminPage.dart';
+import 'package:ghss_periya/screens/Admin/adminpage.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter/src/widgets/container.dart';
 // import 'package:flutter/src/widgets/framework.dart';
-import 'package:ghss_periya/screens/add_students.dart';
+import 'package:ghss_periya/screens/Admin/add_students.dart';
 import 'package:ghss_periya/screens/students_registered.dart';
 
 class SuccessFull extends StatelessWidget {

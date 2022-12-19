@@ -1,10 +1,8 @@
 // import 'package:flutter/cupertino.dart';
 import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:ghss_periya/screens/editscreen.dart';
+
+import 'Admin/editscreen.dart';
 
 class ViewaAstudent extends StatelessWidget {
   String name;
