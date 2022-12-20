@@ -1,8 +1,8 @@
 // ignore_for_file: no_leading_underscores_for_local_identifiers, must_be_immutable
 
 import 'package:flutter/material.dart';
-import 'package:ghss_periya/db/functions/database_functions.dart';
 import 'package:ghss_periya/db/model/data_model.dart';
+import 'package:ghss_periya/screens/Admin/add_students.dart';
 import 'package:hive/hive.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -151,5 +151,5 @@ class EditStudent extends StatelessWidget {
 updateToHive(int index, update) async {
   final studentDataBase = await Hive.openBox<StudentModel>('studentDB');
   studentDataBase.putAt(index, update);
-  getallstudents();
+ studentUpdater.getallstudents();
 }

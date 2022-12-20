@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ghss_periya/screens/Admin/add_students.dart';
 // import 'package:flutter/src/widgets/container.dart';
 // import 'package:flutter/src/widgets/framework.dart';
 // import 'package:ghss_periya/screens/add_students.dart';
@@ -12,7 +13,7 @@ class Firstpagee extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    getallstudents();
+    studentUpdater.getallstudents();
     return Scaffold(
         body: SafeArea(
             child: Container(

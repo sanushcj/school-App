@@ -7,6 +7,8 @@ import 'package:ghss_periya/screens/Admin/adminpage.dart';
 class TeacherPage extends StatelessWidget {
   const TeacherPage({super.key});
 
+
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(

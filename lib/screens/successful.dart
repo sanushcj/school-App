@@ -29,7 +29,7 @@ class SuccessFull extends StatelessWidget {
             TextButton.icon(
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const StudentsRegistered(),
+                    builder: (context) =>  StudentsRegistered(),
                   ));
                 },
                 icon: const Icon(Icons.app_registration),

@@ -22,7 +22,7 @@ class AdminPage extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const StudentsRegistered()));
+                      builder: (context) =>  StudentsRegistered()));
                 },
                 child: const Text(
                   "View Students",

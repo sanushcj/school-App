@@ -2,7 +2,8 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:ghss_periya/db/functions/database_functions.dart';
+import 'package:get/get.dart';
+import 'package:ghss_periya/Controller/student_controller.dart';
 import 'package:ghss_periya/db/model/data_model.dart';
 // import 'package:ghss_periya/screens/students_registered.dart';
 import 'package:ghss_periya/screens/successful.dart';
@@ -13,9 +14,11 @@ import 'package:image_picker/image_picker.dart';
   final _programController = TextEditingController();
   final _addressController = TextEditingController();
 
+  final StudentController studentUpdater = Get.find();
+
+// ignore: must_be_immutable
 class Teacher extends StatelessWidget {
   Teacher({super.key});
-
 
   String? pickedimagefromGallery;
 
@@ -97,7 +100,8 @@ class Teacher extends StatelessWidget {
             // SUBMIT BUTTON
             ElevatedButton.icon(
               onPressed: () {
-                submitButtonClicked(context);
+             
+                submitButtonClicked(context,studentUpdater);
               },
               icon: const Icon(Icons.done_all_rounded),
               label: const Text('Submit'),
@@ -111,7 +115,7 @@ class Teacher extends StatelessWidget {
     );
   }
 
-  submitButtonClicked(context) async {
+  submitButtonClicked(context,StudentController controller) async {
     final _name = _namecontroller.text.trim();
     final _age = _agecontroller.text.trim();
     final _address = _addressController.text.trim();
@@ -135,7 +139,7 @@ class Teacher extends StatelessWidget {
         program: _Program,
         imgofstudent: pickedimagefromGallery!);
 
-    addStudent(_student);
+   controller.addStudent(_student);
     Navigator.push(
         context,
         MaterialPageRoute(
@@ -147,4 +151,7 @@ class Teacher extends StatelessWidget {
    XFile? image = await ImagePicker().pickImage(source: ImageSource.gallery);
    pickedimagefromGallery = image!.path;
   }
+
+ 
+
 }
