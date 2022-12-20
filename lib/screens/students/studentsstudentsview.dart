@@ -41,15 +41,6 @@ class StudentsRegisteredStudent extends StatelessWidget {
                     },
                     title: Text(data.name),
                     subtitle: Text(data.program),
-                    // trailing: IconButton(
-                    //     onPressed: () {
-                    //       if (data.id != null) {
-                    //         deleteStudent(data.id!);
-                    //       } else {
-                    //         print('id nnot found errrorr');
-                    //       }
-                    //     },
-                    //     icon: const Icon(Icons.delete)),
                     leading: CircleAvatar(
                       backgroundImage:
                           FileImage(File(data.imgofstudent.toString())),

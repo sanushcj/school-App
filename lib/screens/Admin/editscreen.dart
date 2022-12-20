@@ -1,4 +1,4 @@
-// ignore_for_file: no_leading_underscores_for_local_identifiers
+// ignore_for_file: no_leading_underscores_for_local_identifiers, must_be_immutable
 
 import 'package:flutter/material.dart';
 import 'package:ghss_periya/db/functions/database_functions.dart';
@@ -8,7 +8,6 @@ import 'package:image_picker/image_picker.dart';
 
 class EditStudent extends StatelessWidget {
   int index;
-final studentDataBase =  Hive.openBox<StudentModel>('studentDB');
   final nameedit = TextEditingController();
   final ageedit = TextEditingController();
   final addressedit = TextEditingController();
@@ -24,7 +23,6 @@ final studentDataBase =  Hive.openBox<StudentModel>('studentDB');
 
   @override
   Widget build(BuildContext context) {
-     final editdata = studentDataBase;
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -146,9 +144,7 @@ final studentDataBase =  Hive.openBox<StudentModel>('studentDB');
           address: newprograme,
           program: newaddress,
           imgofstudent: pickedimagefromGallery!);
-      updateToHive(index, _updateStudent);
-      print(updateToHive(index, _updateStudent));
-    }
+      updateToHive(index, _updateStudent);    }
   }
 }
 

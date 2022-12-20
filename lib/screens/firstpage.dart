@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 // import 'package:flutter/src/widgets/container.dart';
 // import 'package:flutter/src/widgets/framework.dart';
 // import 'package:ghss_periya/screens/add_students.dart';
@@ -26,9 +27,7 @@ class Firstpagee extends StatelessWidget {
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           TextButton.icon(
               onPressed: (() {
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => const StudentsRegisteredStudent(),
-                ));
+               Get.to(const StudentsRegisteredStudent());
               }),
               icon: const Icon(
                 Icons.account_box,
@@ -56,9 +55,7 @@ class Firstpagee extends StatelessWidget {
           // TeacherButton
           TextButton.icon(
             onPressed: (() {
-              Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => const HomePage(),
-              ));
+          Get.to(const TeacherPage());
             }),
             icon: const Icon(Icons.school,
                 size: 100,

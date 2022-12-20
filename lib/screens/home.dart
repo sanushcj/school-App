@@ -1,24 +1,14 @@
 // ignore_for_file: unrelated_type_equality_checks
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:ghss_periya/screens/Admin/adminpage.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class TeacherPage extends StatelessWidget {
+  const TeacherPage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-bool _datamatched = false;
-final _usernamecontroler = TextEditingController();
-final _passwordcontroller = TextEditingController();
-
-class _HomePageState extends State<HomePage> {
-  @override
-
   Widget build(BuildContext context) {
-   
     return SafeArea(
       child: Scaffold(
         body: Container(
@@ -61,14 +51,15 @@ class _HomePageState extends State<HomePage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Visibility(
-                    visible: _datamatched,
-                    child: const Text(
-                      'Username Password Does not match',
-                      style: TextStyle(
-                        color: Colors.red,
-                      ),
-                    ),
+                  Obx(
+                    () => Visibility(
+                        visible: _datamatched.value,
+                        child: const Text(
+                          'Username Password Does not match',
+                          style: TextStyle(
+                            color: Colors.red,
+                          ),
+                        )),
                   ),
                   ElevatedButton.icon(
                       onPressed: (() {
@@ -89,13 +80,13 @@ class _HomePageState extends State<HomePage> {
     var username = _usernamecontroler.text.trim();
     var password = _passwordcontroller.text.trim();
     if (username == password) {
-      Navigator.of(context).push(MaterialPageRoute(
-        builder: (context) => const AdminPage(),
-      ));
+     Get.to(const AdminPage());
     } else {
-      setState(() {
-        _datamatched = true;
-      });
+      _datamatched.value = true;
     }
   }
 }
+
+final _datamatched = false.obs;
+final _usernamecontroler = TextEditingController();
+final _passwordcontroller = TextEditingController();

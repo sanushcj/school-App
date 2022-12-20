@@ -20,11 +20,11 @@ class StudentsRegistered extends StatelessWidget {
         body: SafeArea(
           child: ValueListenableBuilder(
             valueListenable: studentListNotifier,
-            builder: (BuildContext ctx, List<StudentModel> studentList,
+            builder: (BuildContext ctx, List<StudentModel> ssss,
                 Widget? child) {
               return ListView.separated(
                 itemBuilder: (context, index) {
-                  final data = studentList[index];
+                  final data = ssss[index];
                   return ListTile(
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
@@ -46,7 +46,7 @@ class StudentsRegistered extends StatelessWidget {
                           if (data.id != null) {
                             deleteStudent(data.id!);
                           } else {
-                            print('id nnot found errrorr');
+                            // print('id nnot found errrorr');
                           }
                         },
                         icon: const Icon(Icons.delete , color: Colors.red,)),
@@ -57,7 +57,7 @@ class StudentsRegistered extends StatelessWidget {
                   );
                 },
                 separatorBuilder: (context, index) => const Divider(),
-                itemCount: studentList.length,
+                itemCount: ssss.length,
               );
             },
           ),

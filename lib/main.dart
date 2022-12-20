@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:ghss_periya/db/model/data_model.dart';
 import 'package:ghss_periya/screens/firstpage.dart';
 import 'package:hive_flutter/adapters.dart';
@@ -17,7 +18,7 @@ class Mainpage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.deepPurple),
       title: 'GHSS PERIYA',
